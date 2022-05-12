@@ -1,0 +1,13 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    {{ searched }}
+{% endblock %}
+
+{% block body %}
+<ul>
+    {% for item in matched %}
+        <a href="{% url 'wikiPage' item %}"><li>{{ item }}</li></a>
+    {% endfor %}
+</ul>
+{% endblock %}

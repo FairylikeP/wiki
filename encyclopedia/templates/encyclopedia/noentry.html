@@ -1,0 +1,17 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block body %}
+    <div >
+        <h2>Requested page was not found!</h2>
+        <p>
+            There is currently no {{ title }} entry.
+        </p>
+    </div>
+    <div class="alert alert-info">
+        You can create a page <a href="{% url 'new' %}" class="alert-link">here</a>.
+    </div>
+{% endblock %}
